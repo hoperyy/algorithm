@@ -14,6 +14,6 @@
 
 +   练习题
 
-    +   [反转一个单链表]((./practise/reverse-linked-list.md))
+    +   [反转一个单链表](./practise/reverse-linked-list.md)
 
         
