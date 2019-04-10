@@ -48,7 +48,7 @@ const swapPairs = function(head) {
 
 ## 解法 2
 
-https://leetcode.com/submissions/detail/221435117/
+https://leetcode.com/submissions/detail/221435429/
 
 ```js
 const swapPairs = function(head) {
@@ -60,6 +60,7 @@ const swapPairs = function(head) {
 
     let next;
     let next2;
+    let next3;
 
     while(head && head.next) {
         next = head.next;
