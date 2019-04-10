@@ -14,10 +14,6 @@
 
 +   练习题
 
-    +   反转一个单链表
-
-        题目：https://leetcode.com/problems/reverse-linked-list/ 
-
-        [解答](./practise/reverse-linked-list.md)
+    +   [反转一个单链表]((./practise/reverse-linked-list.md))
 
         
