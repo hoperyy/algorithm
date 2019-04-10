@@ -17,19 +17,21 @@ https://leetcode.com/problems/reverse-linked-list/
 ## 解法 1
 
 ```js
-var reverseList = function(head) {
+const reverseList = function(head) {
     if (!head) {
         return null;
     }
     
-    let arr = [];
+    const arr = [];
     
+    // 转为数组
     while(head) {
         arr.unshift(head);
         
         head = head.next;
     }
     
+    // 遍历数组
     for (let i = 0, len = arr.length; i < len; i++) {
         const item = arr[i];
         
