@@ -1,6 +1,11 @@
-const data = require('./data');
+## 题目
 
-function run(head) {
+https://leetcode.com/problems/linked-list-cycle
+
+## 解法 1
+
+```js
+const hasCycle = function(head) {
     while(head) {
         if (head.visited) {
             return true;
@@ -11,8 +16,7 @@ function run(head) {
     }
 
     return false;
-}
+};
+```
 
-const result = run(data.link);
-
-console.log(result);
+标记
