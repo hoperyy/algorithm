@@ -14,7 +14,9 @@ https://leetcode.com/problems/reverse-linked-list/
 [5,4,3,2,1]
 ```
 
-## 解法 1
+## 解法 1：遍历
+
+https://leetcode.com/submissions/detail/221364217/
 
 ```js
 const reverseList = function(head) {
@@ -42,6 +44,36 @@ const reverseList = function(head) {
 };
 ```
 
-思路：
-
 先将链表转存为数组，再一个个反转
+
+## 解法 2：遍历
+
+https://leetcode.com/submissions/detail/221368787/
+
+```js
+const reverseList = function(head) {
+    if (!head) {
+        return null;
+    }
+    
+    let pre = null;
+    let next = null;
+    let result = null;
+    
+    while(head) {
+        result = head;
+        
+        // 暂存
+        next = head.next;
+        
+        // 转换
+        head.next = pre;
+        pre = head;
+        head = next;
+    }
+    
+    return result;
+};
+```
+
+通过两个变量 `pre / head` 实现链表反转
