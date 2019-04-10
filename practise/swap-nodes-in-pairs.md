@@ -45,3 +45,37 @@ const swapPairs = function(head) {
 ```
 
 先转为数组，再操作数组反转
+
+## 解法 2
+
+https://leetcode.com/submissions/detail/221434417/
+
+```js
+const swapPairs = function(head) {
+    if (!head || !head.next) {
+        return head;
+    }
+
+    const result = head.next;
+
+    let next;
+    let next2;
+
+    while(head && head.next) {
+        next = head.next;
+        next2 = next.next || null;
+        next3 = next2 ? next2.next : null;
+
+        // reverse head and next
+        head.next = (next2 && next3) ? next3 : next2;
+        next && (next.next = head);
+
+        // rewrite head
+        head = next2;
+    }
+
+    return result;
+};
+```
+
+4 个为一组，处理好各种情况
