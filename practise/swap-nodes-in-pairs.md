@@ -6,7 +6,7 @@ https://leetcode.com/problems/swap-nodes-in-pairs/
 
 Given `1->2->3->4`, you should return the list as `2->1->4->3`.
 
-## 解法 1
+## 解法 1：先转为数组，再操作数组反转
 
 https://leetcode.com/submissions/detail/221374792/
 
@@ -44,9 +44,7 @@ const swapPairs = function(head) {
 };
 ```
 
-先转为数组，再操作数组反转
-
-## 解法 2
+## 解法 2：4 个为一组，处理好各种情况
 
 https://leetcode.com/submissions/detail/221435429/
 
@@ -78,5 +76,3 @@ const swapPairs = function(head) {
     return result;
 };
 ```
-
-4 个为一组，处理好各种情况

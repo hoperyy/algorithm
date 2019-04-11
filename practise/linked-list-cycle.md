@@ -2,7 +2,7 @@
 
 https://leetcode.com/problems/linked-list-cycle
 
-## 解法 1
+## 解法 1：标记
 
 ```js
 const hasCycle = function(head) {
@@ -19,4 +19,26 @@ const hasCycle = function(head) {
 };
 ```
 
-标记
+## 解法 2：一步两步
+
+```js
+const hasCycle = function(head) {
+    if (!head) {
+        return false;
+    }
+    
+    let next = head.next;
+    let next2 = next ? next.next : null;
+    
+    while(next && next2) {
+        if (next == next2) {
+            return true;
+        }
+        
+        next = next.next;
+        next2 = next2.next ? next2.next.next : null;
+    }
+
+    return false;
+};
+```
