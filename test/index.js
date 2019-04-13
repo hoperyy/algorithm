@@ -1,18 +1,32 @@
 const data = require('./data');
 
 function run(head) {
-    while(head) {
-        if (head.visited) {
-            return true;
-        }
-
-        head.visited = true;
-        head = head.next;
+    if (!head || !head.next) {
+        return null;
     }
 
-    return false;
+    let next = head.next;
+    let next2 = next.next;
+
+    let count = 0;
+
+    while (next && next2) {
+        count++;
+        if (next === next2) {
+            if (next === next2.next) {
+                return next.next;
+            } else {
+                return next;
+            }
+        }
+
+        next = next.next;
+        next2 = next2.next ? next2.next.next : null;
+    }
+
+    return null;
 }
 
-const result = run(data.link);
+const result = run(data.getLinkCycle());
 
 console.log(result);
