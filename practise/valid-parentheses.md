@@ -1,6 +1,17 @@
-const data = require('./data');
+## 题目
 
-function run(s) {
+https://leetcode.com/problems/valid-parentheses/submissions/
+
+## 解法 1：使用栈，字符串从后向前倒序入栈
+
+https://leetcode.com/submissions/detail/222055646/
+
+```js
+/**
+ * @param {string} s
+ * @return {boolean}
+ */
+var isValid = function(s) {
     const stack = [];
 
     const map = {
@@ -27,8 +38,5 @@ function run(s) {
     }
 
     return !stack.length;
-}
-
-const result = run('{()}');
-
-console.log('result: ', result);
+};
+```

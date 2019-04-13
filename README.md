@@ -20,4 +20,14 @@
     +   [找到链表环的起点](./practise/linked-list-cycle-ii.md)
     +   [k 组反转链表](./practise/reverse-nodes-in-k-group.md)
 
-        
+# 堆栈和队列
+
++   简介
+
+    堆栈：先进后出
+
+    队列：先进先出
+
++   练习题
+
+    +   [判断括号字符串是否有效](./practise/valid-parentheses.md)
