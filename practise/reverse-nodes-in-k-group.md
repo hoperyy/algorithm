@@ -1,6 +1,15 @@
-const data = require('./data');
+## 题目
 
-function run(head, k) {
+https://leetcode.com/problems/reverse-nodes-in-k-group/submissions/
+
+## 输入输出
+
+## 解法 1：先转为数组。性能、内存占用均一般
+
+https://leetcode.com/submissions/detail/222040784/
+
+```js
+var reverseKGroup = function(head, k) {
     if (!head || k <= 0) {
         return head;
     }
@@ -58,8 +67,5 @@ function run(head, k) {
     });
 
     return arr4[0];
-}
-
-const result = run(data.link, 3);
-
-console.log('result: ', result);
+};
+```

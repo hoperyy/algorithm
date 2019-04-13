@@ -5,6 +5,12 @@ module.exports = {
             val: 2,
             next: {
                 val: 3,
+                next: {
+                    val: 4,
+                    next: {
+                        val: 5
+                    }
+                }
             }
         }
     },

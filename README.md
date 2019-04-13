@@ -18,5 +18,6 @@
     +   [两两交换链表中的节点](./practise/swap-nodes-in-pairs.md)
     +   [判断链表是否有环](./practise/linked-list-cycle.md)
     +   [找到链表环的起点](./practise/linked-list-cycle-ii.md)
+    +   [k 组反转链表](./practise/reverse-nodes-in-k-group.md)
 
         
