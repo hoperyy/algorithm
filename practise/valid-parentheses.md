@@ -2,7 +2,13 @@
 
 https://leetcode.com/problems/valid-parentheses/submissions/
 
-## 解法 1：使用栈，字符串从后向前倒序入栈
+## 解法 1
+
+1. 字符串倒序入栈
+2. 右侧字符串直接入栈
+3. 左侧字符串
+   1. 匹配到的，出栈
+   2. 匹配不到，入栈
 
 https://leetcode.com/submissions/detail/222055646/
 
