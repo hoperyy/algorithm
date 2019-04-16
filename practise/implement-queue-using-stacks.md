@@ -2,7 +2,7 @@
 
 https://leetcode.com/problems/implement-queue-using-stacks/submissions/
 
-# 解法 1：为 stack2 添加项的前提是 stack2 为空
+# 解法 1：为 stack2 添加项的前提是 stack2 为空。只能使用 `shift / unshift`
 
 ```js
 /**
