@@ -1,5 +1,10 @@
-const data = require('./data');
+# 题目
 
+https://leetcode.com/problems/implement-queue-using-stacks/submissions/
+
+# 解法 1：为 stack2 添加项的前提是 stack2 为空
+
+```js
 /**
  * Initialize your data structure here.
  */
@@ -67,17 +72,4 @@ MyQueue.prototype.empty = function () {
  * var param_3 = obj.peek()
  * var param_4 = obj.empty()
  */
-
-// const result = run('{()}');
-
-// console.log('result: ', result);
-
-const obj = new MyQueue();
-
-obj.push(1);
-obj.push(2);
-console.log(obj.peek());
-console.log(obj.stack1, obj.stack2);
-console.log(obj.push(3));
-console.log(obj.stack1, obj.stack2);
-console.log(obj.peek());
+```
