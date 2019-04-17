@@ -1,62 +1,48 @@
 const data = require('./data');
-
-/**
- * Initialize your data structure here.
- */
-var MyQueue = function () {
-    this.stack1 = [];
-    this.stack2 = [];
+var MyStack = function () {
+    this.queue1 = [];
+    this.queue2 = [];
 };
 
 /**
- * Push element x to the back of queue. 
+ * Push element x onto stack. 
  * @param {number} x
  * @return {void}
  */
-MyQueue.createNew = function () {
-    return new MyQueue();
-};
-
-MyQueue.prototype.push = function (x) {
-    this.stack1.unshift(x);
+MyStack.prototype.push = function (x) {
+    this.queue1.push(x);
 };
 
 /**
- * Removes the element from in front of queue and returns that element.
+ * Removes the element on top of the stack and returns that element.
  * @return {number}
  */
-MyQueue.prototype.pop = function () {
-    // move from stack1 to stack2
-    if (!this.stack2.length) {
-        while (this.stack1.length) {
-            this.stack2.unshift(this.stack1.shift());
-        }
+MyStack.prototype.pop = function () {
+    while (this.queue1.length > 1) {
+        this.queue2.push(this.queue1.shift());
     }
 
-    return this.stack2.shift();
+    return this.queue1.pop();
 };
 
 /**
- * Get the front element.
+ * Get the top element.
  * @return {number}
  */
-MyQueue.prototype.peek = function () {
-    // move from stack1 to stack2
-    if (!this.stack2.length) {
-        while (this.stack1.length) {
-            this.stack2.unshift(this.stack1.shift());
-        }
+MyStack.prototype.top = function () {
+    while (this.queue1.length > 1) {
+        this.queue2.push(this.queue1.shift());
     }
 
-    return this.stack2[0];
+    return this.queue1[0];
 };
 
 /**
- * Returns whether the queue is empty.
+ * Returns whether the stack is empty.
  * @return {boolean}
  */
-MyQueue.prototype.empty = function () {
-    return !this.stack1.length && !this.stack2.length;
+MyStack.prototype.empty = function () {
+    return !this.queue1.length && !this.queue2.length;
 };
 
 /**
@@ -72,12 +58,12 @@ MyQueue.prototype.empty = function () {
 
 // console.log('result: ', result);
 
-const obj = new MyQueue();
+const obj = new MyStack();
 
 obj.push(1);
 obj.push(2);
-console.log(obj.peek());
-console.log(obj.stack1, obj.stack2);
-console.log(obj.push(3));
-console.log(obj.stack1, obj.stack2);
-console.log(obj.peek());
+// console.log(obj.stack1, obj.stack2);
+console.log(obj.pop());
+// console.log(obj.stack1, obj.stack2);
+console.log(obj.top());
+console.log(obj.empty());

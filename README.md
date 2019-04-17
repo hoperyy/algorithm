@@ -32,3 +32,22 @@
 
     +   [判断括号字符串是否有效](./practise/valid-parentheses.md)
     +   [用队列实现堆栈](./practise/implement-queue-using-stacks.md)
+    +   [用堆栈实现队列](./practise/implement-stack-using-queues.md)
+
+# 树 & 二叉树 & 图
+
++   简介
+
+    +   链表：是只有一个子节点
+    +   树
+        +   最多 2 个子节点
+        +   术语：父节点、子节点、兄弟节点、层（level0/level1/...）
+        +   单向
+    +   图
+        +   节点可以反向
+    +   二叉搜索树（Binary Search Tree）：又称有序二叉树、排序二叉树
+        +   空树或满足以下条件的树
+        +   左**子树**所有值均小于根节点的值
+        +   右**子树**所有值均大于根节点的值
+        +   递归的，左右子树也分别为二叉搜索树
+
