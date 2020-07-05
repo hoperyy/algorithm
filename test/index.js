@@ -1,61 +1,27 @@
-const data = require('./data');
-var isMax = function (rootValue, node) {
-    if (!node) {
-        return true;
-    }
-    if (rootValue <= node.val) {
-        return false;
+var searchMatrix = function (matrix, target) {
+    let left = 0;
+    let right = matrix.length - 1;
+
+    while (left <= right) {
+        const midIndex = parseInt((left + right) / 2);
+        const midItem = matrix[midIndex];
+        const midItemLeftVal = midItem[0];
+        const midItemRightVal = midItem[midItem.length - 1];
+
+        if (target < midItemLeftVal) {
+            right = midIndex - 1;
+        } else if (target > midItemRightVal) {
+            left = midIndex + 1;
+        } else {
+            return midItem.indexOf(target) !== -1;
+        }
     }
 
-    return isMax(rootValue, node.left) && isMax(rootValue, node.right);
+    return false;
 };
 
-var isMin = function (rootValue, node) {
-    if (!node) {
-        return true;
-    }
-    if (rootValue >= node.val) {
-        return false;
-    }
-
-    return isMin(rootValue, node.left) && isMin(rootValue, node.right);
-};
-
-var isValidBST = function checkIsValidBST(root) {
-    if (!root || (!root.left && !root.right)) {
-        return true;
-    }
-
-    return isMax(root.val, root.left) && isMin(root.val, root.right) && isValidBST(root.left) && isValidBST(root.right);
-};
-
-console.log(isValidBST({
-    val: 3,
-    right: {
-        val: 30,
-        left: {
-            val: 10,
-            right: {
-                val: 15,
-                right: {
-                    val: 45
-                }
-            },
-
-        },
-    },
-}));
-
-// console.log(isMin(3, {
-//     val: 30,
-//     left: {
-//         val: 10,
-//         right: {
-//             val: 15,
-//             right: {
-//                 val: 45
-//             }
-//         },
-
-//     },
-// }));
+console.log(searchMatrix([
+    [1, 3, 5, 7],
+    [10, 11, 16, 20],
+    [23, 30, 34, 50]
+], 50));

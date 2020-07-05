@@ -25,5 +25,26 @@ module.exports = {
         node2.next = node1;
 
         return node1;
+    },
+    tree: {
+        val: 3,
+        left: {
+            val: 9,
+            left: {
+                val: 12,
+            },
+            right: {
+                val: 9
+            }
+        },
+        right: {
+            val: 20,
+            left: {
+                val: 15,
+            },
+            right: {
+                val: 7
+            }
+        }
     }
 };
